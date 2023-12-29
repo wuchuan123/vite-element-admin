@@ -1,5 +1,13 @@
 import { createApp } from 'vue';
-import './style.css';
+import 'virtual:svg-icons-register';
+import router from '@/router';
+import store from '@/store/index';
 import App from './App.vue';
+import '@/theme/index.less';
+import 'uno.css';
 
-createApp(App).mount('#app');
+const app = createApp(App);
+
+app.use(router);
+app.use(store);
+app.mount('#app');
